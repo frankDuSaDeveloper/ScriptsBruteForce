@@ -25,7 +25,7 @@ with open(filepath) as fp:
               print (url)
               print (data)
               get_body=''
-              get_body = requests.post(url, data).text
+              get_body = requests.get(url, data).text
 			  #aqui puedes buscar una cadena especifica en la cadena que regresa 
               if (get_body.find('Credenciales no encontradas') != -1 ):
                    print ("---> MENSAJE DATOS INCORRECTOS")
