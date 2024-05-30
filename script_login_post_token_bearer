@@ -1,19 +1,19 @@
 import requests
 
 # URL de la API a la que se enviará la solicitud
-url = "http://20.51.202.174/innsist-posmobile-api/api/Login"
+url = "http://URLSERVICIO"
 
 # Datos de usuario y contraseña
 data = {
-        "username":"USRPOS",
-        "password":"12343",
+        "username":"USUARIO",
+        "password":"PASS",
         "device_id":"01"
 }
 
 # Encabezados que incluyen el token de portador
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJDMTYiLCJpYXQiOjE3MTcwOTM4NDksImV4cCI6MTcxNzE4MDI0OX0.Lb0bgAKrmJxzRvUPgRPGsFi9xnSKug24_hQcdAgT6x2u7Mlom13p7XvsZC_qKqSTdp-kHuKT-bztnlMBRFujwg"
+    "Authorization": "Bearer .Lb0bgAKrmJxzRvUPgRPGsFi9xnSKug24_hQcdAgT6x2u7Mlom13p7XvsZC_qKqSTdp-kHuKT-bztnlMBRFujwg"
 }
 
 # Enviar la solicitud POST con los datos y encabezados
